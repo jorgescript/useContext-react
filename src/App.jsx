@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Login } from "./pages/Login";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import { NavBar } from "./components/NavBar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       <div>
@@ -16,6 +18,13 @@ function App() {
         </a>
       </div>
       <h1>useContext</h1>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/*" element={<div>404</div>} />
+      </Routes>
     </div>
   );
 }
