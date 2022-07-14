@@ -39,3 +39,12 @@
 .read-the-docs {
   color: #888;
 }
+
+a {
+  color: #19195c;
+  margin-right: 15px;
+}
+
+a.active {
+  color: #f0f8ff;
+}
